@@ -7,9 +7,9 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: guestbook
+    namespace: default
     server: {{ .Values.spec.destination.server }}
-  project: default
+  project: myproject
   source:
     path: guestbook
     repoURL: {{ .Values.spec.source.repoURL }}
